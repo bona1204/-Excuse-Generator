@@ -1,11 +1,21 @@
-/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+function generateexcuse() {
+  let excuses = {
+    guilt: ["My dog", "My brother", "My uncle", "My mom"],
+    action: ["eat", "destroy", "burn", "throw away"],
+    item: ["my homework", "my project", "my tesis", "my report"],
+    time: ["yesterday", "an hour ago", "this morning", "the past week"]
+  };
+  let Guilt = excuses.guilt[Math.round(Math.random() * 3)];
+  let Action = excuses.action[Math.round(Math.random() * 3)];
+  let Item = excuses.item[Math.round(Math.random() * 3)];
+  let Time = excuses.time[Math.round(Math.random() * 3)];
+
+  return Guilt + " " + Action + " " + Item + " " + Time + " ";
+}
 
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  document.getElementById("excuse").innerHTML = generateexcuse();
 };
