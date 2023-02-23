@@ -1,9 +1,16 @@
 * {
+  display: flexbox;
   box-sizing: border-box;
   caret-color: transparent;
 }
 body {
   margin: 0px;
+  padding: auto;
+}
+div {
+  margin: 0;
+  position: absolute;
+  left: 50%;
 }
 h1 {
   text-align: center;
